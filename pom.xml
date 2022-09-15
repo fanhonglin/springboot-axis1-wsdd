@@ -6,7 +6,7 @@
     <groupId>org.github</groupId>
     <artifactId>axis1</artifactId>
     <version>1.0</version>
-    <packaging>war</packaging>
+<!--    <packaging>jar</packaging>-->
 
     <name>springboot-axis1-wsdd</name>
     <description>springboot axis1 wsdd 部署</description>
@@ -55,6 +55,11 @@
             <version>1.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.xml.soap</groupId>
+            <artifactId>javax.xml.soap-api</artifactId>
+            <version>1.4.0</version>
+        </dependency>
 
         <dependency>
             <groupId>commons-discovery</groupId>
