@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Random;
+import java.util.UUID;
 
 /**
  * @author pony
@@ -27,7 +29,12 @@ public class UpdateAppOrgServices {
         // header
         updateOrgResponse.setHead(new MainAcctStrongAuthenticationResponseHeader());
 
-        UpdateOrgBody updateAppAcctBody = UpdateOrgBody.builder().rsp("0").errDesc("").orgId("1").build();
+        String orgId = "1";
+        if (RequestInfo.contains("add")){
+           orgId = String.valueOf(new Random().nextInt(99));
+        }
+
+        UpdateOrgBody updateAppAcctBody = UpdateOrgBody.builder().rsp("0").errDesc("").orgId(orgId).build();
 
         updateOrgResponse.setBody(updateAppAcctBody);
 
