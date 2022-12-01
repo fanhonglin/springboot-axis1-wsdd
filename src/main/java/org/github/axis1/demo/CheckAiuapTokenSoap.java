@@ -33,8 +33,8 @@ public class CheckAiuapTokenSoap {
         LoginResponseBody loginResponseBody = LoginResponseBody
                 .builder()
                 .rsp("0")
-                .mainAcctId("abc")
-                .appAcctId("abcd")
+                .mainAcctId("administrator")
+                .appAcctId("administrator")
                 .build();
 
         LoginResponseInfo loginResponseInfo = LoginResponseInfo
